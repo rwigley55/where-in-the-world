@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+  </head>
+  <body>
+    <% for (let country of countryData){ %>
+    <p>
+      <span><%= country.name.common %></span>
+      <span><%= country.population.toLocaleString() %></span>
+      <span><%= country.capital %></span>
+      <span><%= country.region %></span>
+    </p>
+    <% } %>
+  </body>
+</html>
