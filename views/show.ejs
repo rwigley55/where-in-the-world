@@ -1,18 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    name:<%= country.name.official %> <br />population<%= country.population %>
-    <br />region: <%= country.region %> <br />
-    subregion: <%= country.subregion %> <br />
-    capital:<%= country.capital %> <br />
-    tld:<%= country.tld[0] %> <br />
-    currency:<%= Object.values(country.currencies)[0].name %> <br />
-    languages: <% for (const language of Object.values(country.languages)) { %>
-    <%= language %> <% } %>
-  </body>
-</html>
+<% layout("layouts/boilerplate") %>
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+      <button>Back</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <img
+        src="<%= country.flags.png %>"
+        class=""
+        alt="flag of <%= country.name.common %>"
+      />
+    </div>
+    <div class="col-6">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">name:<%= country.name.official %></div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <p>population<%= country.population.toLocaleString() %></p>
+            <p>region: <%= country.region %></p>
+            <p>subregion: <%= country.subregion %></p>
+            <p>capital:<%= country.capital %></p>
+          </div>
+          <div class="col-6">
+            <p>tld:<%= country.tld[0] %></p>
+            <p>currency:<%= Object.values(country.currencies)[0].name %></p>
+            <p>
+              languages: <% const languagesArr =
+              Object.values(country.languages); %> <% for (let i = 0; i <
+              languagesArr.length; i++) { %> <%= languagesArr[i] %><%= i ===
+              languagesArr.length - 1 ? '' : ',' %> <% } %>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>Borders:<%= country.borders %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
