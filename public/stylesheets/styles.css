@@ -32,3 +32,16 @@ body {
   height: 160px;
   object-fit: cover;
 }
+
+.card-title {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.card-categories {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
