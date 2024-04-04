@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const fetchCountries = async () => {
   try {
     const response = await axios.get(
-      "https://restcountries.com/v3.1/all?fields=name,capital,region,population"
+      "https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags"
     );
     return response.data;
   } catch (error) {
