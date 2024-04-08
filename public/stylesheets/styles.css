@@ -38,10 +38,30 @@ body {
   font-weight: 800;
 }
 
-.card-categories {
+.fw-600 {
   font-weight: 600;
+}
+
+.fw-800 {
+  font-weight: 800;
 }
 
 a {
   text-decoration: none;
+}
+
+.back-button {
+  background-color: var(--clr-very-light-gray);
+  box-shadow: 0px 0px 15px 0px #d3d3d3;
+  border-radius: 6px;
+}
+
+/* @media (max-width: 1200px) {
+  .text-xl-center {
+    text-align: center !important;
+  }
+} */
+
+.stuff-center {
+  justify-content: center !important;
 }

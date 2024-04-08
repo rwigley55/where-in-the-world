@@ -1,44 +1,66 @@
 <% layout("layouts/boilerplate") %>
 <div class="container">
-  <div class="row">
-    <div class="col-1">
-      <button>Back</button>
+  <div class="row mb-5">
+    <div class="col-6 col-xl-3">
+      <a href="/"
+        ><button class="back-button border-0 py-2 px-5">&larr; Back</button></a
+      >
     </div>
   </div>
   <div class="row">
-    <div class="col-6">
+    <div
+      class="col-xl-6 d-flex justify-content-center justify-content-xl-start"
+    >
       <img
         src="<%= country.flags.png %>"
         class=""
         alt="flag of <%= country.name.common %>"
       />
     </div>
-    <div class="col-6">
+    <div class="col-xl-6">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col">name:<%= country.name.official %></div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <p>population<%= country.population.toLocaleString() %></p>
-            <p>region: <%= country.region %></p>
-            <p>subregion: <%= country.subregion %></p>
-            <p>capital:<%= country.capital %></p>
+        <div class="row mb-3 mt-3 mt-xl-0">
+          <div class="col">
+            <span class="header-text"><%= country.name.official %></span>
           </div>
-          <div class="col-6">
-            <p>tld:<%= country.tld[0] %></p>
-            <p>currency:<%= Object.values(country.currencies)[0].name %></p>
-            <p>
-              languages: <% const languagesArr =
+        </div>
+        <div class="row mb-5">
+          <div class="col-xl-6">
+            <div>
+              <span class="fw-600">Population</span>: <%=
+              country.population.toLocaleString() %>
+            </div>
+            <div><span class="fw-600">Region</span>: <%= country.region %></div>
+            <div>
+              <span class="fw-600">Sub Region</span>: <%= country.subregion %>
+            </div>
+            <div>
+              <span class="fw-600">Capital</span>: <%= country.capital %>
+            </div>
+          </div>
+          <div class="col-xl-6 mt-3 mt-xl-0">
+            <div>
+              <span class="fw-600">Top Level Domain</span>: <%= country.tld[0]
+              %>
+            </div>
+            <div>
+              <span class="fw-600">Currency</span>: <%=
+              Object.values(country.currencies)[0].name %>
+            </div>
+            <div>
+              <span class="fw-600">Languages</span>: <% const languagesArr =
               Object.values(country.languages); %> <% for (let i = 0; i <
               languagesArr.length; i++) { %> <%= languagesArr[i] %><%= i ===
               languagesArr.length - 1 ? '' : ',' %> <% } %>
-            </p>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <p>Borders:<%= country.borders %></p>
+            <div>
+              <span class="fw-600">Border Countries</span>: <%= country.borders
+              %>
+            </div>
           </div>
         </div>
       </div>
