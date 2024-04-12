@@ -57,10 +57,12 @@
         </div>
         <div class="row">
           <div class="col">
-            <div>
-              <span class="fw-600">Border Countries</span>: <%
-              borderCountries.forEach(function(name) { %>
-              <span class="border-country"><%= name %></span>
+            <span class="fw-600">Border Countries</span>:
+            <div class="d-flex border-country-container mt-2">
+              <% borderCountries.forEach(function(name) { %>
+
+              <span class="border-country border-0 py-1 px-3"><%= name %></span>
+
               <% }); %>
             </div>
           </div>
