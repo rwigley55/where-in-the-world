@@ -1,5 +1,5 @@
 <% layout("layouts/boilerplate") %>
-<div class="container">
+<div class="container mb-5">
   <div class="row mb-5">
     <div class="col search-wrapper">
       <label for="search" hidden>Search Countries</label>
@@ -11,8 +11,19 @@
         data-search
       />
     </div>
+    <div class="col filter-wrapper">
+      <label for="region-filter" hidden>Filter by Region</label>
+      <select id="region-filter" class="form-select">
+        <option value="">All Regions</option>
+        <option value="Europe">Europe</option>
+        <option value="Asia">Asia</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </div>
   </div>
-  <div class="row justify-content-center gx-5 gy-5">
+  <div class="row justify-content-center justify-content-xl-start gx-5 gy-5">
     <% for (let country of countryData){ %>
     <div class="country-box col-9 col-xl-3">
       <a href="/<%= country.name.official %>">
@@ -29,7 +40,8 @@
               country.population.toLocaleString() %>
             </p>
             <p class="card-text mb-0">
-              <span class="fw-600">Region</span>: <%= country.region %>
+              <span class="fw-600">Region</span>:
+              <span class="country-region"><%= country.region %></span>
             </p>
             <p class="card-text mb-0">
               <span class="fw-600">Capital</span>: <%= country.capital %>
@@ -42,3 +54,4 @@
   </div>
 </div>
 <script src="/javascripts/search.js"></script>
+<script src="/javascripts/filter.js"></script>

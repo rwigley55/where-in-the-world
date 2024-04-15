@@ -80,6 +80,10 @@ a {
   }
 }
 
+.form-select {
+  border: none;
+}
+
 .hide {
   display: none;
 }
