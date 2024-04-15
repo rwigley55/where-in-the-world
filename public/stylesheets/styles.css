@@ -67,14 +67,17 @@ a {
   flex-wrap: wrap;
 }
 
-/* @media (max-width: 1200px) {
-  .text-xl-center {
-    text-align: center !important;
-  }
-} */
+.search-bar {
+  border: none;
+  box-shadow: 0px 0px 5px 0px #d3d3d3;
+  border-radius: 6px;
+  width: 100%;
+}
 
-.stuff-center {
-  justify-content: center !important;
+@media (min-width: 1200px) {
+  .search-bar {
+    width: 400px;
+  }
 }
 
 .hide {
