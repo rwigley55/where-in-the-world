@@ -76,3 +76,7 @@ a {
 .stuff-center {
   justify-content: center !important;
 }
+
+.hide {
+  display: none;
+}

@@ -1,8 +1,14 @@
 <% layout("layouts/boilerplate") %>
 <div class="container">
+  <div class="row">
+    <div class="col search-wrapper">
+      <label for="search">Search Countries</label>
+      <input type="search" id="search" data-search />
+    </div>
+  </div>
   <div class="row gx-5 gy-5">
     <% for (let country of countryData){ %>
-    <div class="col-xl-3">
+    <div class="country-box col-xl-3">
       <a href="/<%= country.name.official %>">
         <div class="card w-100">
           <img
@@ -20,8 +26,7 @@
               <span class="fw-600">Region</span>: <%= country.region %>
             </p>
             <p class="card-text mb-0">
-              <span class="fw-600">Capital</span>: <%= country.capital
-              %>
+              <span class="fw-600">Capital</span>: <%= country.capital %>
             </p>
           </div>
         </div>
@@ -30,3 +35,4 @@
     <% } %>
   </div>
 </div>
+<script src="/javascripts/search.js"></script>
