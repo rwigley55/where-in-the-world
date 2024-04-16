@@ -1,5 +1,4 @@
 const regionFilter = document.querySelector("#region-filter");
-// const cards = document.querySelectorAll(".country-box");
 
 regionFilter.addEventListener("change", () => {
   const selectedRegion = regionFilter.value.toLowerCase();
@@ -11,6 +10,7 @@ regionFilter.addEventListener("change", () => {
 
     const isRegionVisible =
       selectedRegion === "" || countryRegion.includes(selectedRegion);
+
     card.classList.toggle("hide", !isRegionVisible);
   });
 });

@@ -1,7 +1,7 @@
 <% layout("layouts/boilerplate") %>
 <div class="container mb-5">
-  <div class="row mb-5">
-    <div class="col search-wrapper">
+  <div class="row gap-5 gap-xl-0 mb-5">
+    <div class="col-12 col-xl-6 search-wrapper">
       <label for="search" hidden>Search Countries</label>
       <input
         class="search-bar p-3"
@@ -11,9 +11,9 @@
         data-search
       />
     </div>
-    <div class="col filter-wrapper">
+    <div class="col-12 col-xl-6 d-flex justify-content-xl-end filter-wrapper">
       <label for="region-filter" hidden>Filter by Region</label>
-      <select id="region-filter" class="form-select">
+      <select id="region-filter" class="form-select p-3">
         <option value="">All Regions</option>
         <option value="Europe">Europe</option>
         <option value="Asia">Asia</option>

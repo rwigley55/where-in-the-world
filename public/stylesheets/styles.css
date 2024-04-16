@@ -82,6 +82,11 @@ a {
 
 .form-select {
   border: none;
+  box-shadow: 0px 0px 5px 0px #d3d3d3;
+  border-radius: 6px;
+  color: var(--clr-dark-gray);
+  width: 225px;
+  font-size: 14px;
 }
 
 .hide {
